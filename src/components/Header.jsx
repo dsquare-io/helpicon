@@ -1,4 +1,4 @@
-import appLogo from '../assets/logo.svg';
+
 import Button from "./Button.jsx";
 
 export default function Header() {
@@ -6,7 +6,7 @@ export default function Header() {
         <header className="shadow-md">
             <div className="container flex justify-between items-center p-6 mx-auto">
                 <a href="/">
-                    <img src={appLogo} alt="Logo Image" className="h-12 my-2"/>
+                    <img src="/assets/logo.svg" alt="Logo Image" className="h-12 my-2"/>
                 </a>
                 <div className="flex gap-4">
                     <Button variant="text">Become A Helper</Button>

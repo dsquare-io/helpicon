@@ -1,8 +1,5 @@
 import CTAButton from "./CTAButton.jsx";
 
-import ctaArrowTop from '../assets/cta-arrow-top.png';
-import ctaArrowBottom from '../assets/cta-arrow-bottom.png';
-
 export default function CTA() {
     return (
         <div className="bg-app-200 py-12 lg:py-24 px-6">
@@ -16,8 +13,8 @@ export default function CTA() {
                     </div>
                 </CTAButton>
 
-                <img src={ctaArrowTop} alt="Arrow Top" className="block h-40 absolute left-0 top-0" />
-                <img src={ctaArrowBottom} alt="Arrow Bottom" className="block h-40 absolute right-0 bottom-0" />
+                <img src="/assets/cta-arrow-top.png" alt="Arrow Top" className="block h-40 absolute left-0 top-0" />
+                <img src="/assets/cta-arrow-bottom.png" alt="Arrow Bottom" className="block h-40 absolute right-0 bottom-0" />
             </div>
         </div>
     )

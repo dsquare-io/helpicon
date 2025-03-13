@@ -1,9 +1,6 @@
 import {useState} from "react";
 import AnimateHeight from 'react-animate-height';
 
-import faqExpand from '../assets/faq-expand.svg';
-import faqCollapse from '../assets/faq-collapse.svg';
-
 const FAQS = [
     {
         question: "What is a Helpee?",
@@ -41,7 +38,7 @@ const FAQS = [
 
 function FAQBox({question, answer}) {
     const [isOpen, setIsOpen] = useState(false);
-    const iconUrl = isOpen ? faqCollapse : faqExpand;
+    const iconUrl = isOpen ? "/assets/faq-collapse.svg" : "/assets/faq-expand.svg";
 
     return (
         <div className="shadow-md rounded-xl p-6 bg-white flex">
