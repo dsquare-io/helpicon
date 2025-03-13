@@ -42,7 +42,7 @@ function FAQBox({question, answer}) {
 
     return (
       <div className="shadow-md rounded-xl bg-white">
-          <button className="mr-6 mb-auto p-6 flex w-full gap-x-4" onClick={() => setIsOpen(!isOpen)}>
+          <button className="mr-6 mb-auto p-6 flex w-full gap-x-4 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
               <img src={iconUrl} className="w-4" alt=""/>
               <h4 className="text-xl font-semibold">{question}</h4>
           </button>
