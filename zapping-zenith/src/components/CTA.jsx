@@ -13,8 +13,8 @@ export default function CTA() {
                     </div>
                 </CTAButton>
 
-                <img src="../assets/cta-arrow-top.png" alt="Arrow Top" className="block h-40 absolute left-0 top-0" />
-                <img src="../assets/cta-arrow-bottom.png" alt="Arrow Bottom" className="block h-40 absolute right-0 bottom-0" />
+                <img src="/assets/cta-arrow-top.png" alt="Arrow Top" className="block h-40 absolute left-0 top-0" />
+                <img src="/assets/cta-arrow-bottom.png" alt="Arrow Bottom" className="block h-40 absolute right-0 bottom-0" />
             </div>
         </div>
     )

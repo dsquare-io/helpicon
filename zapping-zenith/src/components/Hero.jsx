@@ -20,7 +20,7 @@ export default function Hero() {
                     </div>
                 </div>
                 <div className="flex flex-col items-center lg:items-end">
-                    <img src="../assets/banner.png" alt="Banner" className="aspect-auto h-100 lg:h-120 "/>
+                    <img src="/assets/banner.png" alt="Banner" className="aspect-auto h-100 lg:h-120 "/>
                 </div>
             </div>
         </div>
