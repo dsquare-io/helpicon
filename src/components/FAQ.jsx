@@ -47,7 +47,7 @@ function FAQBox({question, answer}) {
               <h4 className="text-xl font-semibold">{question}</h4>
           </button>
           <AnimateHeight duration={500} height={isOpen ? 'auto' : 0}>
-              <p className="text-gray-600 mt-4 pb-6 px-6">{answer}</p>
+              <p className="text-gray-600 pb-6 pr-6 pl-14">{answer}</p>
           </AnimateHeight>
       </div>
     );
