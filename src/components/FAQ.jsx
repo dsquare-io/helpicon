@@ -30,7 +30,7 @@ const FAQS = [
 
 function FAQBox({question, answer}) {
     const [isOpen, setIsOpen] = useState(false);
-    const iconUrl = isOpen ? "../assets/faq-collapse.svg" : "../assets/faq-expand.svg";
+    const iconUrl = isOpen ? "./assets/faq-collapse.svg" : "./assets/faq-expand.svg";
 
     return (
       <div className="shadow-md rounded-xl bg-white">
