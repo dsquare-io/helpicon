@@ -1,0 +1,79 @@
+---
+// -mb-8 on last image
+
+const STRINGS = {
+    en: {
+        title: 'Why Choose Helpicon?',
+        reasons: [
+            {
+                header: 'Cost-effective',
+                text: 'Pay only for the services you actually need.',
+                icon: '/assets/card-icon-price.png',
+                image: '/assets/flexible-services.png',
+            },
+            {
+                header: 'User-friendly platform',
+                text: 'Easy management of tasks, payments, and communication.',
+                icon: '/assets/card-icon-verified.png',
+                image: '/assets/verified-cleaners.png',
+            },
+            {
+                header: 'Reliable services',
+                text: 'Our Helpers undergo thorough screenings and have verified ratings.',
+                icon: '/assets/card-icon-security.png',
+                image: '/assets/security-and-simplifity.png',
+            },
+        ],
+    },
+    sv: {
+        title: 'Varför välja Helpicon?',
+        reasons: [
+            {
+                header: 'Kostnadseffektivitet',
+                text: 'Betala bara för de tjänster ni faktiskt behöver.',
+                icon: '/assets/card-icon-price.png',
+                image: '/assets/flexible-services.png',
+            },
+            {
+                header: 'Smidig plattform',
+                text: 'Enkel hantering av uppdrag, betalningar och kommunikation.',
+                icon: '/assets/card-icon-verified.png',
+                image: '/assets/verified-cleaners.png',
+            },
+            {
+                header: 'Pålitliga tjänster',
+                text: 'Våra Helpers genomgår noggranna kontroller och har verifierade betyg.',
+                icon: '/assets/card-icon-security.png',
+                image: '/assets/security-and-simplifity.png',
+            },
+        ],
+    }
+}
+
+const { locale } = Astro.props;
+const { title, reasons } = STRINGS[locale];
+---
+
+
+<div class="container mx-auto py-12 px-6">
+    <div class="bg-[#292A3C] grid lg:grid-cols-2 text-white rounded-3xl items-center">
+        <div class="flex flex-col space-y-12 p-8 lg:pr-0 items-center lg:items-start">
+            <h3 class="text-3xl lg:text-5xl font-semibold mt-4">{title}</h3>
+            {reasons.map((reason) => (
+                <div class="flex flex-col lg:flex-row">
+                    <div class="mb-2 lg:mr-6 lg:shrink-0 mx-auto">
+                        <img src={reason.icon} alt={reason.header} class="w-16" />
+                    </div>
+                    <div class="flex flex-col items-center lg:items-start">
+                        <h4 class="text-2xl">{reason.header}</h4>
+                        <p class="text-xl">{reason.text}</p>
+                        <img src={reason.image} alt={reason.text} class="mt-4 h-60 lg:hidden" />
+                    </div>
+                </div>
+            ))}
+        </div>
+        <div class="hidden lg:flex pr-8 justify-end">
+            <img src="/assets/why-choose-us.png" alt={title} class="max-h-160"/>
+        </div>
+    </div>
+</div>

@@ -7,8 +7,19 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://dsquare-io.github.io',
+  base: 'helpicon',
+
   vite: {
     plugins: [tailwindcss()]
+  },
+  i18n: {
+    locales: ["sv", "en"],
+    defaultLocale: "sv",
+    routing: {
+      prefixDefaultLocale: true,
+      redirectToDefaultLocale: true,
+    }
   },
 
   integrations: [react()],

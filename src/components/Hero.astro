@@ -1,0 +1,86 @@
+---
+import Button from "./Button.jsx";
+import Carousel from "./Carousel.jsx";
+
+const STRINGS = {
+    en: {
+        title: "Secure & smooth services for Businesses",
+        description: "Is your company looking for reliable and flexible services to manage tasks efficiently? With Helpicon, you gain quick access to qualified Helpers who can assist with everything from office cleaning and maintenance to administrative tasks and customer service.",
+        bullets: [
+            {
+                title: "Save time & resources",
+                description: "Let us match you with the right expertise."
+            },
+            {
+                title: "Flexible pricing",
+                description: "You decide what you're willing to pay."
+            },
+            {
+                title: "Safe & easy",
+                description: "Background-checked Helpers with verified reviews."
+            }
+        ]
+    },
+    sv: {
+        title: "Säkra & smidiga tjänster för företag",
+        description: "Letar ditt företag efter pålitliga och flexibla tjänster för att hantera uppgifter smidigt? Med Helpicon får ni snabb tillgång till kvalificerade Helpers som kan hjälpa er med allt från kontorsstädning och vaktmästeri till administrativa uppgifter och kundservice.",
+        bullets: [
+            {
+                title: "Beskriv era behov",
+                description: "Definiera vad ni behöver hjälp med."
+            },
+            {
+                title: "Välj er budget",
+                description: "Ange hur mycket ni är villiga att betala."
+            },
+            {
+                title: "Hitta rätt kandidat",
+                description: "Välj den bästa Helpern baserat på omdömen och erfarenhet."
+            }
+        ]
+    }
+}
+
+const {locale} = Astro.props;
+const {title, description, bullets} = STRINGS[locale];
+const images = [
+    '/assets/carousel/1.jpg',
+    '/assets/carousel/2.jpg',
+    '/assets/carousel/3.jpg',
+    '/assets/carousel/4.jpg',
+    '/assets/carousel/5.jpg',
+]
+---
+
+<div class="relative">
+    <Carousel images={images} client:load/>
+    <div class="absolute top-0 left-0 w-full h-full text-white">
+
+        <div class="flex h-full items-center container mx-auto py-12 px-6">
+            <div class="flex flex-col gap-y-8">
+                <h2 class="text-5xl lg:text-7xl font-semibold drop-shadow-lg">
+                    {title}
+                </h2>
+                <p class="mt-6 text-lg md:text-xl max-w-3xl leading-relaxed">
+                    {description}
+                </p>
+                <ul class="mt-8 space-y-3 text-lg md:text-xl font-medium">
+                    {bullets.map((bullet) => (
+                        <li class="flex items-center space-x-2">
+                            <span class="text-app-600 text-2xl">✔</span>
+                            <span class="text-semibold">{bullet.title}</span>
+                            <span>
+                                —
+                                {bullet.description}
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+                <div class="flex gap-x-4 justify-center lg:justify-start">
+                    <Button href="https://helpicon.se/signup">Publicera ett uppdrag</Button>
+                    <Button href="https://helpicon.se/signup" variant="secondary">Hitta Helpers</Button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

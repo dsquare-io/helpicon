@@ -7,9 +7,9 @@ const CLASSNAMES_BY_VARIANT = {
 }
 
 export default function Button({className, variant, ...props}) {
-    return <button className={c(
+    return <a className={c(
         className,
-        "rounded-md px-4 py-2 text-lg font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 cursor-pointer",
+        "rounded-md px-4 py-2 text-lg font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 cursor-pointer",
         CLASSNAMES_BY_VARIANT[variant] || CLASSNAMES_BY_VARIANT.primary
     )} {...props} />;
 }

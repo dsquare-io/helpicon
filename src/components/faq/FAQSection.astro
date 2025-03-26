@@ -1,0 +1,63 @@
+---
+import FAQBox from "./FAQBox"
+
+const STRINGS = {
+    en: {
+        title: "Frequently Asked Questions",
+        questions: [
+            {
+                question: 'Is this service suitable for businesses?',
+                answer: 'Yes, we offer flexible solutions for both small and large businesses.'
+            },
+            {
+                question: 'Can we arrange a fixed solution for recurring services?',
+                answer: 'Yes, we can arrange a fixed solution for recurring services. Please contact our support team for more information.'
+            },
+            {
+                question: 'How do you ensure quality and security?',
+                answer: 'All our Helpers are background checked and verified. We also have a rating system in place to ensure quality service.'
+            }
+        ]
+    },
+    sv: {
+        title: "Vanliga frågor",
+        questions: [
+            {
+                question: 'Är tjänsten anpassad för företag?',
+                answer: 'Ja, vi erbjuder flexibla lösningar för både små och stora företag.'
+            },
+            {
+                question: 'Kan vi få en fast lösning för återkommande tjänster?',
+                answer: 'Absolut! Kontakta oss så skräddarsyr vi en lösning för era behov.'
+            },
+            {
+                question: 'Hur säkerställer ni kvalitet och säkerhet?',
+                answer: 'Alla Helpers genomgår bakgrundskontroller och betygsätts efter varje uppdrag.'
+            }
+        ]
+    },
+}
+
+const { locale } = Astro.props;
+const { title, questions } = STRINGS[locale];
+---
+
+<div class="container mx-auto py-12 px-6">
+  <h3 class="text-3xl lg:text-5xl font-semibold text-center">{title}</h3>
+  <div class="grid lg:grid-cols-2 gap-6 my-12">
+      <div class="contents lg:block lg:space-y-6">
+          {questions.filter((e, i) => i % 2 === 0).map((faq) => (
+            <div>
+                <FAQBox question={faq.question} answer={faq.answer} client:load />
+            </div>
+          ))}
+      </div>
+      <div class="contents lg:block lg:space-y-6">
+          {questions.filter((e, i) => i % 2 === 1).map((faq) => (
+            <div>
+                <FAQBox question={faq.question} answer={faq.answer} client:load />
+            </div>
+          ))}
+      </div>
+  </div>
+</div>

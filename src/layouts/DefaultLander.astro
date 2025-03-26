@@ -1,0 +1,27 @@
+---
+import "../styles/global.css"
+
+import Header from "../components/header/Header.jsx";
+import Hero from "../components/Hero.astro";
+import HowItWorks from "../components/HowItWorks.astro";
+import WhyChooseUs from "../components/WhyChooseUs.astro";
+import FactSection from "../components/facts/FactSection.astro";
+import FAQSection from "../components/faq/FAQSection.astro";
+import CTA from "../components/CTA.astro";
+import Footer from "../components/Footer.jsx";
+
+import Layout from '../layouts/Layout.astro';
+
+const currentLocale = Astro.currentLocale || 'sv';
+---
+
+<Layout>
+	<Header client:load locale={currentLocale} />
+	<Hero locale={currentLocale}/>
+	<HowItWorks locale={currentLocale} />
+	<WhyChooseUs locale={currentLocale}/>
+	<FactSection locale={currentLocale} />
+	<FAQSection locale={currentLocale} />
+	<CTA locale={currentLocale} />
+	<Footer/>
+</Layout>
