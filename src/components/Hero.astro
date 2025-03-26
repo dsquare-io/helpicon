@@ -19,7 +19,9 @@ const STRINGS = {
                 title: "Safe & easy",
                 description: "Background-checked Helpers with verified reviews."
             }
-        ]
+        ],
+        postATask: "Post a Task",
+        findHelpers: "Find Helpers"
     },
     sv: {
         title: "Säkra & smidiga tjänster för företag",
@@ -37,12 +39,14 @@ const STRINGS = {
                 title: "Hitta rätt kandidat",
                 description: "Välj den bästa Helpern baserat på omdömen och erfarenhet."
             }
-        ]
+        ],
+        postATask: "Publicera ett uppdrag",
+        findHelpers: "Hitta Helpers"
     }
 }
 
 const {locale} = Astro.props;
-const {title, description, bullets} = STRINGS[locale];
+const {title, description, bullets, postATask, findHelpers} = STRINGS[locale];
 const images = [
     '../assets/carousel/1.jpg',
     '../assets/carousel/2.jpg',
@@ -77,8 +81,8 @@ const images = [
                     ))}
                 </ul>
                 <div class="flex gap-x-4 justify-center lg:justify-start">
-                    <Button href="https://helpicon.se/signup">Publicera ett uppdrag</Button>
-                    <Button href="https://helpicon.se/signup" variant="secondary">Hitta Helpers</Button>
+                    <Button href="https://helpicon.se/signup">{postATask}</Button>
+                    <Button href="https://helpicon.se/signup" variant="secondary">{findHelpers}</Button>
                 </div>
             </div>
         </div>
