@@ -21,24 +21,24 @@ const { locale } = Astro.props;
 const { title, businessesUsingOurServices, verifiedHelpers, tasksCompleted } = STRINGS[locale];
 ---
 
-<div class="py-12 lg:py-24 px-6 bg-[url(/assets/facts-bg.jpg)] bg-cover bg-center">
+<div class="py-12 lg:py-24 px-6 bg-[url(../assets/facts-bg.jpg)] bg-cover bg-center">
     <div class="container mx-auto flex flex-col items-center">
         <div class="flex mb-8">
-            <img src="/assets/fact-left-arrow.png" alt="Left Arrow" class="h-20 lg:hidden -rotate-45 mt-8" />
+            <img src="../assets/fact-left-arrow.png" alt="Left Arrow" class="h-20 lg:hidden -rotate-45 mt-8" />
             <h3 class="text-5xl font-semibold text-center text-white">{title}</h3>
-            <img src="/assets/fact-right-arrow.png" alt="Right Arrow" class="h-20 lg:hidden rotate-45 mt-8" />
+            <img src="../assets/fact-right-arrow.png" alt="Right Arrow" class="h-20 lg:hidden rotate-45 mt-8" />
         </div>
         <div class="grid lg:grid-cols-3 max-w-5xl gap-y-8">
             <div class="flex flex-col items-center">
-                <img src="/assets/fact-left-arrow.png" alt="Left Arrow" class="h-40 ml-auto hidden lg:block" />
+                <img src="../assets/fact-left-arrow.png" alt="Left Arrow" class="h-40 ml-auto hidden lg:block" />
                 <FactBox title={businessesUsingOurServices} number="5,000+" />
             </div>
             <div class="flex flex-col items-center">
-                <img src="/assets/fact-down-arrow.png" alt="Down Arrow" class="h-80 hidden lg:block" />
+                <img src="../assets/fact-down-arrow.png" alt="Down Arrow" class="h-80 hidden lg:block" />
                 <FactBox title={verifiedHelpers} number="7,000+" />
             </div>
             <div class="flex flex-col items-center">
-                <img src="/assets/fact-right-arrow.png" alt="Right Arrow" class="h-40 mr-auto hidden lg:block" />
+                <img src="../assets/fact-right-arrow.png" alt="Right Arrow" class="h-40 mr-auto hidden lg:block" />
                 <FactBox title={tasksCompleted} number="30,000+" />
             </div>
         </div>

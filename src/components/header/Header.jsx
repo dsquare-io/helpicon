@@ -13,7 +13,7 @@ export default function Header({ locale }) {
             <header className="shadow-md">
                 <div className="container flex justify-between items-center p-6 mx-auto">
                     <a href="/">
-                        <img src="/assets/logo.svg" alt="Logo Image" className="h-12 my-2"/>
+                        <img src="../assets/logo.svg" alt="Logo Image" className="h-12 my-2"/>
                     </a>
                     <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
                         <IconClass aria-hidden="true" className="size-6"/>
